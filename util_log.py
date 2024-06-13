@@ -11,7 +11,7 @@ logger.add(
         )
 
 logger.add(
-            "mes_arquivo_de_logs.log",
+            "mes_arquivo_de_logs_critical.log",
             format = "{time} {level} {message} {file}",
             level = "CRITICAL"
         )
