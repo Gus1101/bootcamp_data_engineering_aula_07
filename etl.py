@@ -19,6 +19,7 @@ def criar_kpi(df:pd.DataFrame) -> pd.DataFrame:
     """
     Função para crair o KPI de total de vendas
     """
+    df = df
     df['Total'] = df['Quantidade'] * df['Venda']
     return df
 
