@@ -2,7 +2,7 @@ import pandas as pd
 import os
 import glob
 
-### Função para leittura e concatenação de arquivos Json
+### Função para leitura e concatenação de arquivos Json
 
 def ler_arquivos_json(pasta:str) -> pd.DataFrame:
     """
@@ -19,11 +19,10 @@ def criar_kpi(df:pd.DataFrame) -> pd.DataFrame:
     """
     Função para crair o KPI de total de vendas
     """
-    df = df
     df['Total'] = df['Quantidade'] * df['Venda']
     return df
 
-### Criar procedure para exportar arquivos em Parquet ou csv
+### Procedure para exportar arquivos em Parquet ou csv
 
 def exportar_arquivos_parquet_csv(df:pd.DataFrame, lista:list):
     """
@@ -35,7 +34,7 @@ def exportar_arquivos_parquet_csv(df:pd.DataFrame, lista:list):
         if formato == 'parquet':
             df.to_parquet('dados.parquet',index=False)
 
-### Função para consolidar o processo
+### Procedure para consolidar o processo
 
 def pipeline_geracao_kpi():
     """
