@@ -5,15 +5,15 @@ from functools import wraps
 logger.remove()
 
 logger.add(
-            sink=stderr,
-            format = "{time} <r>{level}</r> <g>{message}</g> {file}",
+            "mes_arquivo_de_logs.log",
+            format = "{time} {level} {message} {file}",
             level = "INFO"
         )
 
 logger.add(
             "mes_arquivo_de_logs.log",
             format = "{time} {level} {message} {file}",
-            level = "INFO"
+            level = "CRITICAL"
         )
 
 def log_decorator(func):
