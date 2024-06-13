@@ -37,12 +37,10 @@ def exportar_arquivos_parquet_csv(df:pd.DataFrame, lista:list):
 
 ### Procedure para consolidar o processo
 
-def pipeline_geracao_kpi():
+def pipeline_geracao_kpi(pasta_argumento:str, formato_saida:list ):
     """
     Procedure para pipeline de dados de vendas
     """
-    pasta_argumento: str = 'data'
     df = ler_arquivos_json(pasta_argumento)
     df_kpi = criar_kpi(df)
-    lista_formato_saida = ['parquet']
-    exportar_arquivos_parquet_csv(df_kpi,lista_formato_saida)
+    exportar_arquivos_parquet_csv(df_kpi,formato_saida)
