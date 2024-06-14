@@ -1,4 +1,4 @@
 .python-version
 .gitignore
 poetry.lock
-__pycache__
+__pycache__/
